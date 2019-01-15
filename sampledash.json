@@ -1,0 +1,1458 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"title": "Client Data",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 1,
+				"4": -7
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"ClientName\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Mobile No.",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"ClientMobile\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Client ID",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"ClientID\"]",
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"title": "Client Data",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 2,
+				"4": 3
+			},
+			"col_width": 2,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Client ID",
+						"size": "big",
+						"value": "datasources[\"ClientUsageData\"][\"ClientID\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Last Updated",
+						"size": "regular",
+						"value": "datasources[\"ClientUsageData\"][\"TimeStamp\"]",
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"title": "Line Parameters",
+			"width": 1,
+			"row": {
+				"3": 9,
+				"4": 9
+			},
+			"col": {
+				"3": 1,
+				"4": 1
+			},
+			"col_width": 3,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "Power",
+						"value": [
+							"datasources[\"ClientUsageData\"][\"ACActivePower\"]",
+							"datasources[\"ClientUsageData\"][\"ACReactivePower\"]",
+							"datasources[\"ClientUsageData\"][\"DCPower\"]"
+						],
+						"include_legend": true,
+						"legend": "Active Power,Reactive Power,DC power"
+					}
+				},
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "Voltage",
+						"value": [
+							"datasources[\"ClientUsageData\"][\"ACVR\"]",
+							"datasources[\"ClientUsageData\"][\"ACVY\"]",
+							"datasources[\"ClientUsageData\"][\"ACVB\"]",
+							"datasources[\"ClientUsageData\"][\"DCV\"]"
+						],
+						"include_legend": true,
+						"legend": "R,Y,B,DC"
+					}
+				},
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "Current",
+						"value": [
+							"datasources[\"ClientUsageData\"][\"ACIR\"]",
+							"datasources[\"ClientUsageData\"][\"ACIY\"]",
+							"datasources[\"ClientUsageData\"][\"ACIB\"]",
+							"datasources[\"ClientUsageData\"][\"DCI\"]"
+						],
+						"include_legend": true,
+						"legend": "R,Y,B,DC"
+					}
+				}
+			]
+		},
+		{
+			"title": "AC Power",
+			"width": 1,
+			"row": {
+				"3": 26,
+				"6": 26
+			},
+			"col": {
+				"3": 1,
+				"6": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Active Power",
+						"value": "datasources[\"ClientUsageData\"][\"ACActivePower\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "1000"
+					}
+				},
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "Active Power",
+						"value": [
+							"datasources[\"ClientUsageData\"][\"ACActivePower\"]"
+						],
+						"include_legend": false
+					}
+				}
+			]
+		},
+		{
+			"title": "AC Power",
+			"width": 1,
+			"row": {
+				"3": 26,
+				"6": 26
+			},
+			"col": {
+				"3": 2,
+				"6": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Reactive Power",
+						"value": "datasources[\"ClientUsageData\"][\"ACReactivePower\"]",
+						"units": "VA",
+						"min_value": 0,
+						"max_value": "1000"
+					}
+				},
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "Reactive Power",
+						"value": [
+							"datasources[\"ClientUsageData\"][\"ACReactivePower\"]"
+						]
+					}
+				}
+			]
+		},
+		{
+			"title": "DC Power",
+			"width": 1,
+			"row": {
+				"3": 26,
+				"6": 26
+			},
+			"col": {
+				"3": 3,
+				"6": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "DC Power",
+						"value": "datasources[\"ClientUsageData\"][\"DCPower\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "DC Power",
+						"value": [
+							"datasources[\"ClientUsageData\"][\"DCPower\"]"
+						]
+					}
+				}
+			]
+		},
+		{
+			"title": "AC Line Parameters R Phase",
+			"width": 1,
+			"row": {
+				"3": 38,
+				"6": 38
+			},
+			"col": {
+				"3": 1,
+				"6": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Voltage",
+						"value": "datasources[\"ClientUsageData\"][\"ACVR\"]",
+						"units": "V",
+						"min_value": "150",
+						"max_value": "600"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Current",
+						"value": "datasources[\"ClientUsageData\"][\"ACIR\"]",
+						"units": "A",
+						"min_value": 0,
+						"max_value": "5"
+					}
+				}
+			]
+		},
+		{
+			"title": "AC Line Parameters Y Phase",
+			"width": 1,
+			"row": {
+				"3": 38,
+				"6": 38
+			},
+			"col": {
+				"3": 2,
+				"6": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Voltage",
+						"value": "datasources[\"ClientUsageData\"][\"ACVY\"]",
+						"units": "V",
+						"min_value": "150",
+						"max_value": "600"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Current",
+						"value": "datasources[\"ClientUsageData\"][\"ACIY\"]",
+						"units": "A",
+						"min_value": 0,
+						"max_value": "5"
+					}
+				}
+			]
+		},
+		{
+			"title": "AC Line Parameters B Phase",
+			"width": 1,
+			"row": {
+				"3": 38,
+				"6": 38
+			},
+			"col": {
+				"3": 3,
+				"6": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Voltage",
+						"value": "datasources[\"ClientUsageData\"][\"ACVB\"]",
+						"units": "V",
+						"min_value": "150",
+						"max_value": "600"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Current",
+						"value": "datasources[\"ClientUsageData\"][\"ACIB\"]",
+						"units": "A",
+						"min_value": 0,
+						"max_value": "5"
+					}
+				}
+			]
+		},
+		{
+			"title": "DC Line Parameters",
+			"width": 1,
+			"row": {
+				"3": 52,
+				"6": 52
+			},
+			"col": {
+				"3": 1,
+				"6": 1
+			},
+			"col_width": 3,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Voltage",
+						"value": "datasources[\"ClientUsageData\"][\"DCV\"]",
+						"units": "V",
+						"min_value": 0,
+						"max_value": "300"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Current",
+						"value": "datasources[\"ClientUsageData\"][\"DCI\"]",
+						"units": "A",
+						"min_value": 0,
+						"max_value": "5"
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 66,
+				"8": 66
+			},
+			"col": {
+				"3": 1,
+				"8": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load1Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][2])%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load1P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load1Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 66,
+				"8": 66
+			},
+			"col": {
+				"3": 2,
+				"8": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load2Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][2]/2)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "power",
+						"value": "datasources[\"ClientUsageData\"][\"Load2P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load2Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 66,
+				"8": 66
+			},
+			"col": {
+				"3": 3,
+				"8": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load3Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][2]/4)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load3P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load3Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 80,
+				"8": 84
+			},
+			"col": {
+				"3": 1,
+				"8": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load4Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][2]/8)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load4P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load4Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 80,
+				"8": 84
+			},
+			"col": {
+				"3": 2,
+				"8": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load5Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][2]/16)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load5P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load5Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 80,
+				"8": 84
+			},
+			"col": {
+				"3": 3,
+				"8": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load6Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][2]/32)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load6P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load6Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 94,
+				"8": 102
+			},
+			"col": {
+				"3": 1,
+				"8": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load7Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][2]/64)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load7P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load7Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 94,
+				"8": 102
+			},
+			"col": {
+				"3": 2,
+				"8": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load8Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][2]/128)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load8P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load8Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 94,
+				"8": 102
+			},
+			"col": {
+				"3": 3,
+				"8": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load9Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][1])%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load9P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load9Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 108,
+				"8": 120
+			},
+			"col": {
+				"3": 1,
+				"8": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load10Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][1]/2)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load10P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load10Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 108,
+				"8": 120
+			},
+			"col": {
+				"3": 2,
+				"8": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load11Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][1]/4)%2"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load11P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load11Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 108,
+				"8": 120
+			},
+			"col": {
+				"3": 3,
+				"8": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load12Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][1]/8)%2"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load12P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load12Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 122,
+				"8": 138
+			},
+			"col": {
+				"3": 1,
+				"8": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load13Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][1]/16)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load13P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load13Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 122,
+				"8": 138
+			},
+			"col": {
+				"3": 2,
+				"8": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load14Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][1]/32)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load14P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load14Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 122,
+				"8": 138
+			},
+			"col": {
+				"3": 3,
+				"8": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load15Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][1]/64)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load15P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load15Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 136,
+				"8": 156
+			},
+			"col": {
+				"3": 1,
+				"8": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load16Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][1]/128)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load16P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load16Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 136,
+				"8": 156
+			},
+			"col": {
+				"3": 2,
+				"8": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load17Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][0])%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load17P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load17Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 136,
+				"8": 156
+			},
+			"col": {
+				"3": 3,
+				"8": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load18Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][0]/2)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load18P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load18Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 150,
+				"8": 174
+			},
+			"col": {
+				"3": 1,
+				"8": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load19Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round(datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][0]/4)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load19P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load19Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Load Statistics",
+			"width": 1,
+			"row": {
+				"3": 150,
+				"8": 174
+			},
+			"col": {
+				"3": 2,
+				"8": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Name",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load20Name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "Status",
+						"value": "Math.round((datasources[\"ClientUsageData\"][\"LoadStatus\"][\"data\"][0])/8)%2",
+						"on_text": "ON",
+						"off_text": "OFF"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Power",
+						"value": "datasources[\"ClientUsageData\"][\"Load20P\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "500"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Priority",
+						"size": "regular",
+						"value": "datasources[\"ClientData\"][\"Load20Priority\"]",
+						"animate": true,
+						"units": ""
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "ClientUsageData",
+			"type": "JSON",
+			"settings": {
+				"url": "http://127.0.0.1/datalatest/Client1",
+				"use_thingproxy": true,
+				"refresh": 1,
+				"method": "GET"
+			}
+		},
+		{
+			"name": "ClientData",
+			"type": "JSON",
+			"settings": {
+				"url": "http://127.0.0.1/client/Client1",
+				"use_thingproxy": true,
+				"refresh": 5,
+				"method": "GET"
+			}
+		}
+	],
+	"columns": 3
+}

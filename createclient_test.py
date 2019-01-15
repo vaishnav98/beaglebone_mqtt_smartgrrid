@@ -1,0 +1,49 @@
+import localserver
+
+clientdata={}
+clientdata["ClientID"]="Client2"
+clientdata["ClientName"]="Vaishnav"
+clientdata["ClientPassword"]="password"
+clientdata["ClientMobile"]="9497217765"
+clientdata["Load1Name"]="Load 1"
+clientdata["Load2Name"]="Load 2"
+clientdata["Load3Name"]="Load 3"
+clientdata["Load4Name"]="Load 4"
+clientdata["Load5Name"]="Load 5"
+clientdata["Load6Name"]="Load 6"
+clientdata["Load7Name"]="Load 7"
+clientdata["Load8Name"]="Load 8"
+clientdata["Load9Name"]="Load 9"
+clientdata["Load10Name"]="Load 10"
+clientdata["Load11Name"]="Load 11"
+clientdata["Load12Name"]="Load 12"
+clientdata["Load13Name"]="Load 13"
+clientdata["Load14Name"]="Load 14"
+clientdata["Load15Name"]="Load 15"
+clientdata["Load16Name"]="Load 16"
+clientdata["Load17Name"]="Load 17"
+clientdata["Load18Name"]="Load 18"
+clientdata["Load19Name"]="Load 19"
+clientdata["Load20Name"]="Load 20"
+clientdata["Load1Priority"]=1
+clientdata["Load2Priority"]=2
+clientdata["Load3Priority"]=3
+clientdata["Load4Priority"]=4
+clientdata["Load5Priority"]=5
+clientdata["Load6Priority"]=10
+clientdata["Load7Priority"]=9
+clientdata["Load8Priority"]=8
+clientdata["Load9Priority"]=7
+clientdata["Load10Priority"]=6
+clientdata["Load11Priority"]=11
+clientdata["Load12Priority"]=12
+clientdata["Load13Priority"]=13
+clientdata["Load14Priority"]=14
+clientdata["Load15Priority"]=15
+clientdata["Load16Priority"]=16
+clientdata["Load17Priority"]=17
+clientdata["Load18Priority"]=18
+clientdata["Load19Priority"]=19
+clientdata["Load20Priority"]=20
+
+localserver.createClient(clientdata)
